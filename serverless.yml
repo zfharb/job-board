@@ -19,13 +19,13 @@ functions:
       - http: 
           path: serverlessSetup/goodbye
           method: post
-  # question:
-  #   handler: src/functions/question.handler
-  #   dependsOn: SNSHelloEvent
-  #   events:
-  #     - sns:
-  #         arn: !Ref SNSHelloEvent
-  #         topicName: hello-event
+  question:
+    handler: src/functions/question.handler
+    dependsOn: SNSHelloEvent
+    events:
+      - sns:
+          arn: !Ref SNSHelloEvent
+          topicName: hello-event
 
 # Serverless plugins
 plugins:
