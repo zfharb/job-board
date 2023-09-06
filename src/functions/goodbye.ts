@@ -8,14 +8,8 @@ export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayPr
   const docClient = DynamoDBDocumentClient.from(client);
 
   try {
+    console.log('making a post request -------------------------------');
     const parsedBody = JSON.parse(event.body || '');
-    // const getCommand = new GetCommand({
-    //   TableName: 'jobs',
-    //   Key: {
-    //     id: uuidv4(),
-    //     firstName: 'Shoebill',
-    //   },
-    // });
     const command = new PutCommand({
       TableName: 'jobs',
       Item: {
@@ -26,7 +20,7 @@ export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayPr
     await docClient.send(command);
     return {
       statusCode: 200,
-      body: `Goodbye ${parsedBody?.name}`,
+      body: `Goodbye ${parsedBody?.name} :)`,
     };
   } catch (err) {
     return {
