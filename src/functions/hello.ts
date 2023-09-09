@@ -4,6 +4,10 @@ export const handler = async (_event: APIGatewayProxyEvent): Promise<APIGatewayP
   try {
     const response = {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'text/html',
+      },
       body: 'HELLO FRIEND!!!',
     };
     return response;

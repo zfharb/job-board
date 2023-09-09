@@ -31,20 +31,20 @@ servers:
 paths:
   /hello:
     get:
-      tags:
-        - Categories
-      summary: List all catgories
-      description: Returns the list of categories supported by EazyShop
+      summary: return simple hello message
+      description: return simple hello message
       responses:
         '200':
           description: hello message
           content:
-            application/json:
+            text/html:
               schema:
-                type: string
-               
-             
-       
- 
-  
-   
+                $ref: '#/components/schemas/hello' 
+              
+
+components:
+  schemas:
+    hello:
+      type: string
+      example: wazzap
+

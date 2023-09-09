@@ -185,7 +185,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverlessSetup/dev/1694284458996-2023-09-09T18:34:18.996Z/serverlessSetup.zip"
+                "S3Key": "serverless/serverlessSetup/dev/1694292582900-2023-09-09T20:49:42.900Z/serverlessSetup.zip"
               },
               "Handler": "src/functions/hello.handler",
               "Runtime": "nodejs18.x",
@@ -210,7 +210,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverlessSetup/dev/1694284458996-2023-09-09T18:34:18.996Z/serverlessSetup.zip"
+                "S3Key": "serverless/serverlessSetup/dev/1694292582900-2023-09-09T20:49:42.900Z/serverlessSetup.zip"
               },
               "Handler": "src/functions/goodbye.handler",
               "Runtime": "nodejs18.x",
@@ -235,7 +235,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/serverlessSetup/dev/1694284458996-2023-09-09T18:34:18.996Z/serverlessSetup.zip"
+                "S3Key": "serverless/serverlessSetup/dev/1694292582900-2023-09-09T20:49:42.900Z/serverlessSetup.zip"
               },
               "Handler": "src/functions/question.handler",
               "Runtime": "nodejs18.x",
@@ -254,34 +254,34 @@
               "SNSHelloEvent"
             ]
           },
-          "HelloLambdaVersionZeNCcxI5EUnNeCLebCaE9gXdsFSXyAeGTINfL8K5w": {
-            "Type": "AWS::Lambda::Version",
-            "DeletionPolicy": "Retain",
-            "Properties": {
-              "FunctionName": {
-                "Ref": "HelloLambdaFunction"
-              },
-              "CodeSha256": "G6lP9tLsR2HABpiVDr79Oavh1LwL/LPVmaEDihltZ7o="
-            }
-          },
-          "GoodbyeLambdaVersion1A5bbhXMLW7bfb9LskiRi9a0VE92qYBjALz1h7wyNqQ": {
-            "Type": "AWS::Lambda::Version",
-            "DeletionPolicy": "Retain",
-            "Properties": {
-              "FunctionName": {
-                "Ref": "GoodbyeLambdaFunction"
-              },
-              "CodeSha256": "G6lP9tLsR2HABpiVDr79Oavh1LwL/LPVmaEDihltZ7o="
-            }
-          },
-          "QuestionLambdaVersionXGb2s7VBawxYM0B55DvJ62ZenG3fBCL6lFbOkZE": {
+          "QuestionLambdaVersionPRXMIv7BfMcGVO6rDqnuWo8qz3Oup23rdN7Hwprcs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "QuestionLambdaFunction"
               },
-              "CodeSha256": "G6lP9tLsR2HABpiVDr79Oavh1LwL/LPVmaEDihltZ7o="
+              "CodeSha256": "vatV5pmVnZG8IA/C3wZMRsCRp9hcLMapflNJsXNlXsE="
+            }
+          },
+          "GoodbyeLambdaVersionySDRVa07pDR1M9G2U5QZnFWyNnpdpo7GMWikKlzeoU": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "GoodbyeLambdaFunction"
+              },
+              "CodeSha256": "vatV5pmVnZG8IA/C3wZMRsCRp9hcLMapflNJsXNlXsE="
+            }
+          },
+          "HelloLambdaVersionCI65qSm9QL78zGn9m076xtbhLfVNUL7tcSPriKMg40A": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "HelloLambdaFunction"
+              },
+              "CodeSha256": "vatV5pmVnZG8IA/C3wZMRsCRp9hcLMapflNJsXNlXsE="
             }
           },
           "ApiGatewayRestApi": {
@@ -427,7 +427,7 @@
               "GoodbyeLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1694284398813": {
+          "ApiGatewayDeployment1694292527417": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -562,31 +562,31 @@
               "Name": "sls-serverlessSetup-dev-ServerlessDeploymentBucketName"
             }
           },
-          "HelloLambdaFunctionQualifiedArn": {
+          "QuestionLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersionZeNCcxI5EUnNeCLebCaE9gXdsFSXyAeGTINfL8K5w"
+              "Ref": "QuestionLambdaVersionPRXMIv7BfMcGVO6rDqnuWo8qz3Oup23rdN7Hwprcs"
             },
             "Export": {
-              "Name": "sls-serverlessSetup-dev-HelloLambdaFunctionQualifiedArn"
+              "Name": "sls-serverlessSetup-dev-QuestionLambdaFunctionQualifiedArn"
             }
           },
           "GoodbyeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GoodbyeLambdaVersion1A5bbhXMLW7bfb9LskiRi9a0VE92qYBjALz1h7wyNqQ"
+              "Ref": "GoodbyeLambdaVersionySDRVa07pDR1M9G2U5QZnFWyNnpdpo7GMWikKlzeoU"
             },
             "Export": {
               "Name": "sls-serverlessSetup-dev-GoodbyeLambdaFunctionQualifiedArn"
             }
           },
-          "QuestionLambdaFunctionQualifiedArn": {
+          "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "QuestionLambdaVersionXGb2s7VBawxYM0B55DvJ62ZenG3fBCL6lFbOkZE"
+              "Ref": "HelloLambdaVersionCI65qSm9QL78zGn9m076xtbhLfVNUL7tcSPriKMg40A"
             },
             "Export": {
-              "Name": "sls-serverlessSetup-dev-QuestionLambdaFunctionQualifiedArn"
+              "Name": "sls-serverlessSetup-dev-HelloLambdaFunctionQualifiedArn"
             }
           },
           "ServiceEndpoint": {
@@ -730,7 +730,7 @@
         "timeout": 6,
         "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "HelloLambdaVersionZeNCcxI5EUnNeCLebCaE9gXdsFSXyAeGTINfL8K5w"
+        "versionLogicalId": "HelloLambdaVersionCI65qSm9QL78zGn9m076xtbhLfVNUL7tcSPriKMg40A"
       },
       "goodbye": {
         "handler": "src/functions/goodbye.handler",
@@ -755,7 +755,7 @@
         "timeout": 6,
         "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "GoodbyeLambdaVersion1A5bbhXMLW7bfb9LskiRi9a0VE92qYBjALz1h7wyNqQ"
+        "versionLogicalId": "GoodbyeLambdaVersionySDRVa07pDR1M9G2U5QZnFWyNnpdpo7GMWikKlzeoU"
       },
       "question": {
         "handler": "src/functions/question.handler",
@@ -784,7 +784,7 @@
         "timeout": 6,
         "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "QuestionLambdaVersionXGb2s7VBawxYM0B55DvJ62ZenG3fBCL6lFbOkZE"
+        "versionLogicalId": "QuestionLambdaVersionPRXMIv7BfMcGVO6rDqnuWo8qz3Oup23rdN7Hwprcs"
       }
     },
     "resources": {
@@ -823,7 +823,7 @@
     "artifact": "/Users/zharb/job-board/.build/.serverless/serverlessSetup.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/serverlessSetup/dev/1694284458996-2023-09-09T18:34:18.996Z",
+    "artifactDirectoryName": "serverless/serverlessSetup/dev/1694292582900-2023-09-09T20:49:42.900Z",
     "artifact": "serverlessSetup.zip"
   }
 }
